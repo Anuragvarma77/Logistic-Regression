@@ -9,10 +9,12 @@ with open("model.pkl", "rb") as file:
 st.title("Logistic Regression Predictor")
 
 st.write("Enter the values for prediction:")
+sex = st.selectbox("Sex", ["male", "female"])
+sex_encoded = 1 if sex == "male" else 0
 
 # Example input fields (replace with your real features)
 feature1 = st.number_input("Survived", step=0.1)
-feature2 = st.number_input("Sex", step=0.1)
+feature2 = st.number_input("Sex")
 
 input_data = np.array([[feature1, feature2]])
 
