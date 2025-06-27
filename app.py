@@ -30,6 +30,6 @@ input_data = np.array([[pclass, sex_encoded, age, sibsp, parch, fare, embarked_e
 
 # Predict on button click
 if st.button("Predict Survival"):
-    prediction = model.predict(input_data)
+    prediction = model.predict(input_data)[0]
     output = "Survived" if prediction[0] == 1 else "Did not survive"
     st.success(f"Prediction: {output}")
