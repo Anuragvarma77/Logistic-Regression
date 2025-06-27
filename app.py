@@ -14,7 +14,7 @@ st.write("Enter the values for prediction:")
 feature1 = st.number_input("Survived", step=0.1)
 feature2 = st.number_input("Sex", step=0.1)
 
-input_data = np.array([[feature1, feature2]])
+input_data = np.array([feature1, feature2])
 
 if st.button("Predict"):
     prediction = model.predict(input_data)
